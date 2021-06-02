@@ -1,5 +1,5 @@
 import pickle, os, urllib.request as ur
-
+"""Update File"""
 def update():
     with ur.urlopen("https://github.com/sukritS009312/update/raw/main/flightServer.py") as updateFile:
         with open(os.path.basename(__file__),"wb") as py:
