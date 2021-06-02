@@ -74,6 +74,7 @@ Time to Approach: {recd[i][3]}\nPrice : ₹{recd[i][4]}/-")
         elif "update" in todo.lower():
             update()
             print("Updated the file successfully! Restart the program to check new update and features")
+            exit()
         else:
             exit()
         print("="*80)
