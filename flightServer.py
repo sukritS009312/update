@@ -4,6 +4,7 @@ def update():
     with ur.urlopen("https://github.com/sukritS009312/update/raw/main/flightServer.py") as updateFile:
         with open(os.path.basename(__file__),"wb") as py:
             py.write(updateFile.read())
+            return
 
 def addFlight():
     recd = displayRecord()
@@ -72,6 +73,7 @@ Time to Approach: {recd[i][3]}\nPrice : ₹{recd[i][4]}/-")
                 continue
         elif "update" in todo.lower():
             update()
+            print("Updated the file successfully!")
         else:
             exit()
         print("="*80)
