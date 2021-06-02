@@ -4,6 +4,7 @@ def update():
     with ur.urlopen("https://github.com/sukritS009312/update/raw/main/flightServer.py") as updateFile:
         with open(os.path.basename(__file__),"wb") as py:
             py.write(updateFile.read())
+
 def addFlight():
     recd = displayRecord()
     with open("availability.dat","wb+") as f:
@@ -47,6 +48,7 @@ if not os.path.isfile("availability.dat"):
         pickle.dump({},f)
 
 while True:
+    print("Enter \"1\" for adding records\nEnter \"2\" for deleting specific records\nEnter \"3\" for viewing all the records\nEnter \"4\" for deleting all the records\nType and enter \"update\" for updating the program\n")
     todo = input("What to do? ")
     print("="*80)
     try:    
@@ -68,7 +70,7 @@ Time to Approach: {recd[i][3]}\nPrice : ₹{recd[i][4]}/-")
                 cleanRecord()
             else:
                 continue
-        elif todo.lower() == "update":
+        elif "update" in todo.lower():
             update()
         else:
             exit()
