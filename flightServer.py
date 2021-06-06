@@ -10,7 +10,7 @@ def addFlight():
     recd = displayRecord()
     with open("availability.dat","wb+") as f:
         print("Enter details of the flight as per the instructions. \nFLIGHT NUMBER SHOULD BE UNIQUE IN RECORD OR ELSE THE DETAILS WOULD BE OVERWRITTEN.\n")
-        interg = ["Flight No: ","Departing Place: ","Approaching Place: ","Time of Departure: ","Time to Approach: ","Price of the ticket (in Rupees): "]
+        interg = ["Flight No: ","Departing Place: ","Approaching Place: ","Time of Departure: ","Time to Approach: ","Price of the ticket (in Rupees): ", "Seats Vacant: "]
         details = [input(i) for i in interg]
         for i in range(len(details)):
             if not len(details[i]):
@@ -63,8 +63,7 @@ while True:
                 print("No Record Found!\n"+"-"*80)
                 continue
             for i in recd.keys():
-                print(f"Flight No. : {i}\nDeparting Place : {recd[i][0]}\nApproaching Place : {recd[i][1]}\nTime of Departure : {recd[i][2]}\n\
-Time to Approach: {recd[i][3]}\nPrice : ₹{recd[i][4]}/-")
+                print(f"Flight No. : {i}\nDeparting Place : {recd[i][0]}\nApproaching Place : {recd[i][1]}\nTime of Departure : {recd[i][2]}\nTime to Approach: {recd[i][3]}\nPrice : ₹{recd[i][4]}/-\nSeats Vacant : {recd[i][5]")
                 print("-"*80)
         elif todo == "4":
             if input("This will delete all the registered flights. Are you sure? ").lower()[0] == "y":
