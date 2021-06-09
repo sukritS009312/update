@@ -1,6 +1,9 @@
 """Update File"""
 import pickle, os, urllib.request as ur, webbrowser
-
+def update():
+    with ur.urlopen("https://github.com/sukritS009312/update/raw/main/flightServer.py") as updateFile:
+        with open(os.path.basename(__file__),"wb") as py:
+            py.write(updateFile.read())
 def addFlight():
     recd = displayRecord()
     with open("availability.dat","wb+") as f:
