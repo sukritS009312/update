@@ -12,8 +12,8 @@ else:
     print("Here Are The Flights Scheduled-\n")
     for i in recd.keys():
         print("-"*80)
-        print("Flight No : "+i+"\n")
+        print("Flight No: "+i+"\n")
         for j,k in recd[i].items():
-            print(f"{j} : {k}")
+            print(f"{j} {k}")
 print("-"*80)   
 input("Hit Enter to exit")
