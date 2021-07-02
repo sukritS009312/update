@@ -1,5 +1,3 @@
-"""Updated File"""
-
 import pickle, os, urllib.request as ur, webbrowser
 
 def update():
